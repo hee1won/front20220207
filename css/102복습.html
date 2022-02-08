@@ -2,29 +2,63 @@
 <html>
 <head>
     <style>
+        .selector{
+            background-color: red;
+            color: black;
+        }
+        h2{
+            font-size: 40px;
+            text-align: center;
+            background-color: wheat;
+        }
+        p{
+            font-size: 30px;
+        }
         .today{
-            
+            background-color: black;
+            color: white;
+            text-shadow: 5px 5px 5px white;
+            text-align: center;
+            font-size: 70px;
+        }
+        #tag{
+            color: red; background-color: wheat; text-align: center;
         }
     </style>
 </head>
-<body>
-    <h class="today">20220208복습</h>
-    <h></h>
-    <h></h>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
+<body style="background-color: beige; font-family: monospace;">
+    <h1 class="today">20220208복습 <br></h1>
+    <h1 id="tag">태그 종류</h1>
+    <p>&lt;a&gt;태그는 하이퍼링크 주소로 클릭했을때 다른 사이트로 이동할때 쓰인다. <br> a태그의 attribute는 href와 같이 쓰인다.</p>
+    <p>&lt;style&gt;태그는 property:value; 식으로 property = 무엇을, 이름 : value = 어떻게, 값 이라는 뜻이다.</p>
+    <p style="text-decoration: underline;">img 태그에 alt는 사진이 나오지 않았을때 대체 텍스트를 의미한다.</p>
+    <p style="text-decoration: underline double;">style 태그의 attribute는 font-size(폰트 크기), color(폰트 색), background-color(폰트 배경 색)<br>
+        font-famaily(폰트 종류), text-align(정렬) 등이 있다.
+    </p>
+    <p style="background-color: black; color: white;">color은 3가지 방법으로 나타낼 수 있다. <br>
+        ex) #ff6347 (16진법), tomato(이름), 255, 99, 71(rgb) 옆 3가지는 모두 같은 색이다.
+    </p>
+    <p style="font-family: monospace;">parent element는 감싸고 있는 element를 말한다.</p>
+    <h2>&lt;text-decoration&gt;</h2>
+    <p style="text-decoration: line-through;">:line-through = 글 중간에 선처리</p>
+    <p style="text-decoration: underline;">:underline = 글 밑에 밑줄</p>
+    <p style="text-decoration: underline double;">:underline double = 밑줄이 두줄로 처리</p>
+    <h2>&lt;font-family&gt;</h2>
+    <p style="font-family: gulim">font-family는 fall-back시스템으로 인하여 첫번째 폰트가 다운이 안되어있을시에 ,쉼표로 다음 폰트가 나오게 한다.</p>
+    <p style="font-family: gulim">폰트 선택 마지막에는 폰트가 모두 없을때를 대비하여 폰트 그룹으로 적는다. ex)sans-serif, monospace, cursive</p>
+    <h2>&lt;text-align&gt;</h2>
+    <p style="text-align: center;">:center = 텍스트 가운데 정렬</p>
+    <p style="text-align: right;">:right = 텍스트 오른쪽 정렬</p>
+    <p style="text-align: left;">:left = 텍스트 왼쪽 정렬</p>
+    <p style="text-align: justify;">:justify = 끝에 맞추어 정렬</p>
+    <h1 class="today">Selector</h1>
+    <p style="text-align: center; background-color: black; color: white;">주의 해야 할 점</p>
+    <h2>id Selector</h2>
+    <p class="selector">id Selector는 attribute로 element앞 부분에 사용하고 id를 넣고 #으로 지정해준다.</p>
+    <p class="selector">id selector는 한 id당 하나씩 프로그래머의 약속.</p>
+    <p class="selector">id selector는 대소문자 구분됨.</p>
+    <h2>class Selector</h2>
+    <p class="selector">class selector는 .으로 묶는다 (id selector는 #으로)</p>
+    <p class="selector">calss selector는 여러 element로 묶을 수 있다.</p>
 </body>
 </html>
