@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1{
+            background-color: black;
+            color: wheat;
+        }
+        :link{
+            color: red;
+        }
+        :visited{
+            color: green;
+        }
+        #hover:hover{
+            background-color: red;
+        }
+        #active:active{
+            background-color: rebeccapurple;
+        }
+        #ad+h1{
+            background-color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1><a href="https://www.dsadsa.com">들어간 적이 없는 링크</a></h1>
+    <p>&lt;a&gt;a태그의 링크를 들어간적이 없는 주소를 바꾸는 셀렉터는 :link이다.</p>
+    <p>위처럼 셀렉터앞에 :로 시작하면 pseudo-class라고 한다.</p>
+    <h1><a href="https://www.daum.net">방문한 적이 있는 링크</a></h1>
+    <p>위처럼 방문한 적이 있는 a태그의 속성을 변경하고 싶으면 pseudo-class의 :visit이다</p>
+    <h1>pesudo-class에는 여러가지가 있다.</h1>
+    <h1>:hover</h1>
+    <h2>:hover는 마우스가 위에 있을때 변경되는 속성을 얘기한다.</h2>
+    <h3 id="hover">ex) naver</h3>
+    <h1>:active</h1>
+    <h2>:active는 마우스를 누르고 있을때 변경되는 속성을 얘기한다.</h2>
+    <h3 id="active">ex)naver</h3>
+    <h1 id="ad">adjacent-sibling셀렉터는 지정 하는 다음 엘리먼트가 나오게 한다.</h1>
+    <h1>ex)asd (코드 id ad참조)</h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+</body>
+</html>
