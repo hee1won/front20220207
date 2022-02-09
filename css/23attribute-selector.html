@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        [title]{
+            /* title 타이틀 모두 */
+            text-decoration: underline;
+        }
+        h1,h2[title]{
+            /* h1,h2의 title 모두 */
+            color: blue;
+        }
+
+        [title="seoul"]{
+            /* title의 seoul만 */
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem, ipsum dolor.</h1>
+    <h1>Quam, minima harum.</h1>
+    <h1 title="korea">Lorem, ipsum dolor.</h1>
+    <h1 title="seoul">Magnam, voluptate adipisci?</h1>
+
+    <p title="busan">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt repellendus sed, iste saepe harum quam repellat aperiam error accusamus perspiciatis ea odio non iusto aliquid sapiente accusantium ex quis recusandae.</p>
+    <h2 title="seoul">Lorem, ipsum dolor.</h2>
+
+
+</body>
+</html>
