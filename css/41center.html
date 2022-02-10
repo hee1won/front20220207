@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        span{
+            text-align: center;
+            background-color: aqua;
+            /* inline은 text가 센터에 배치된건 맞지만 필요한 만큼만 생성되는거라 차이가 없다. */
+        }
+        div{
+            text-align: center;
+            background-color: blue;
+        }
+        #ex1{
+            background-color: chocolate;
+            width: 300px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- inline요소를 가운데 배치하는 방법 -->
+    <span>Lorem.</span>
+    <div>
+        <span>
+
+            Lorem, ipsum.
+
+    </span>
+</div>
+    <!-- block요소를 가운데 배치 margin을 auto로 주면 된다.-->
+    <div id="ex1">Lorem.</div>
+
+</body>
+</html>

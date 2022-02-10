@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        ul{
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+        .sub > li{
+            width: 120;
+            padding: 0px;
+            margin: 0px;
+        }
+        .sub{
+            display: none;
+            position: absolute;
+            top: -5px;
+            left: 118px;
+            background-color: black;
+            color: white;
+        }
+        .main > li{
+            width: 120px;
+            position: relative;
+            padding: 3px;
+            margin: 0px;
+            background-color: black;
+            color: wheat;
+            box-sizing: border-box;
+            border: 5px solid black;
+        }
+        .main > li:hover > .sub{
+            display: block;
+            border-right: 5px solid yellow;
+        }
+    </style>
+</head>
+<body>
+    <ul class="main">
+        <li>
+            Lorem.
+            <ul class="sub">
+                <li>Lorem.</li>
+                <li>Aperiam!</li>
+                <li>Reiciendis?</li>
+            </ul>
+        </li>
+        <li>
+            Error?
+            <ul class="sub">
+                <li>Lorem.</li>
+                <li>Dolor!</li>
+                <li>Non.</li>
+            </ul>
+        </li>
+        <li>
+            Illo?
+            <ul class="sub">
+                <li>Lorem.</li>
+                <li>Obcaecati?</li>
+                <li>Necessitatibus?</li>
+            </ul>
+        </li>
+        <li>
+            At?
+            <ul class="sub">
+                <li>Lorem.</li>
+                <li>Magnam?</li>
+                <li>Iusto?</li>
+            </ul>
+        </li>
+        <li>
+            Molestias.
+            <ul class="sub">
+                <li>Lorem.</li>
+                <li>Sunt!</li>
+                <li>Non!</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

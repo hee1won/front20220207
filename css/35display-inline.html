@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- inline의 대표적인 element는 img ,a element등이 있다 -->
+<html>
+<head>
+    <style>
+        a{
+            border: 2px solid black;
+        }
+        .container > span{
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="">Lorem, ipsum.</a><a href="">Lorem, ipsum.</a><a href="">Lorem, ipsum.</a>
+
+    <hr>
+
+    <img src="../html/아무그림.jpg" alt="amugrim"><img src="../html/아무그림1.png" alt="amugrim1">
+    <!-- span element는 브라우저 기본셋팅이 안되어있는 inline element이다. -->
+
+    <hr>
+
+    <span>Lorem, ipsum.</span>
+    <span>Laborum, nemo.</span>
+    <span>Voluptatibus, est.</span>
+
+    <hr>
+    <!-- 띄어쓰기를 해도 한줄에 나오지만 붙혀서 쓰면 그대로 나오고 띄어서 쓰면 스페이스 처리가 된다. -->
+
+    <span>Lorem, ipsum.</span><span>Accusantium, sed.</span><span>Id, porro!</span>
+
+    <hr>
+
+    <!-- div.container -->
+    <!-- .container이랑 같은 결과가 나온다 -->
+    <!-- inline dythsms width, height, padding, margin 가 의도한대로 적용되지 않는다 -->
+    <div class="container">
+        <span>Lorem, ipsum.</span><span>Cum, necessitatibus?</span><span>Voluptate, exercitationem?</span>
+    </div>
+    
+</body>
+</html>
