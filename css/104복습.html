@@ -34,6 +34,7 @@
         .main-content-container{
             margin: 30px 0px;
             background-color: beige;
+            padding: 0px 30px;
         }
         .side-menu-container{
             margin: 30px 0px;
@@ -66,10 +67,6 @@
         h1{
             font-size: 50px;
         }
-        .css-right-button, .css-left-button{
-            display: flex;
-            font-size: 30px;
-        }
         .bar{
             display: flex;
             font-size: 30px;
@@ -82,14 +79,20 @@
         .css-button{
             display: flex;
             margin: 0px 20px;
-            font-size: 20px;
             padding: 0px 50px;
+            justify-content: space-between;
         }
         .bar1:hover{
             background-color: forestgreen;
             box-sizing: border-box;
         }
-        .first{
+
+        .my-btn {
+            font-size: 30px;
+            background-color: #4caf50;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 8px 16px;
         }
     </style>
 </head>
@@ -164,13 +167,15 @@
     <div class="main-content-container">
             <h1>CSS Selectors Reference</h1>
     <div class="css-button">
-        <div id="css=left-button">
-            <button>&lt;Previous</button>
+        <div id="css-left-button">
+            <button class="my-btn">&lt; Previous</button>
         </div>
         <div id="css-right-button">
-            <button>next&gt;</button>
+            <button class="my-btn">next &gt;</button>
         </div>
     </div>
+    <br>
+    <hr>
             <h1>At, natus laudantium.</h1>
             <p>Voluptas repudiandae deserunt necessitatibus, quas quidem aperiam fuga, dolor incidunt quod culpa similique voluptatem architecto cum ducimus magnam debitis iusto officiis inventore tenetur. Ad, et in impedit aliquam eligendi illum.</p>
         </div>
