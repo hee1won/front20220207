@@ -17,8 +17,11 @@
             padding: 10px 20px;
             font-weight: bold;
         }
+        .nav-menu-item{
+            font-size: 14px;
+        }
         .nav{
-            background-color: black;
+            background-color: #282A35;
             color: white;
         }
         .nav-menu-item:hover{
@@ -96,13 +99,27 @@
             width: 200px;
             background-color: grey;
         }
+        .main-left{
+            background-color: #E7E9EB;
+        }
         .main-content{
             flex: 1;
+            padding: 16px 32px 32px 32px;
+        }
+        .main-left-item{
+            padding: 2px 2px 1px 16px;
+            font-size: 15px;
+        }
+        .main-left-item:hover{
+            background-color: pink;
+        }
+        .main-left-item:active{
+            background-color: hotpink;
         }
     </style>
     <div class="main-container">
         <div class="main-left">
-            <div class="main-left-item">Lorem.</div>
+            <div style="font-size: 32px;" class="main-left-item">Lorem.</div>
             <div class="main-left-item">Eligendi.</div>
             <div class="main-left-item">Nostrum.</div>
             <div class="main-left-item">Alias.</div>
@@ -112,7 +129,7 @@
             <div class="main-left-item">Necessitatibus!</div>
             <div class="main-left-item">Debitis.</div>
             <div class="main-left-item">Suscipit.</div>
-            <div class="main-left-item">Maxime?</div>
+            <div style="font-size: 32px;" class="main-left-item">Maxime?</div>
             <div class="main-left-item">Quo.</div>
             <div class="main-left-item">Quia.</div>
             <div class="main-left-item">Non.</div>
@@ -127,7 +144,7 @@
             <div class="main-left-item">Eius.</div>
             <div class="main-left-item">Accusantium.</div>
             <div class="main-left-item">Vero.</div>
-            <div class="main-left-item">Voluptatibus.</div>
+            <div style="font-size: 32px" class="main-left-item">Voluptatibus.</div>
             <div class="main-left-item">Esse!</div>
             <div class="main-left-item">Sint?</div>
             <div class="main-left-item">Officiis.</div>
@@ -137,17 +154,51 @@
             .button-container{
                 display: flex;
                 justify-content: space-between;
+                padding: 20px 20px;
+            }
+            .btbt{
+                background-color: #4caf50;
+                font-size: 25px;
+                color: white;
+            }
+            .main-container{
+                font-size: 42px;
+            }
+            .lis1{
+                font-size: 15px;
+                line-height: 1.5;
             }
         </style>
         <div class="main-content">
-            <h1>Lorem, ipsum dolor.</h1>
+            <div class="image"></div>
+                <img src="../css/la.jpeg" style="width: 100%; height: 90px; text-align: center;">
+                <h1>CSS TUTORIAL</h1>
 
         <div class="button-container">
-            <button>Previous</button>
-            <button>Next</button>
+            <button class="btbt">Previous</button>
+            <button class="btbt">Next</button>
         </div>
+
+        <hr>
+
+        <h2>Best Web Safe Fonts for HTML and CSS</h2>
+        <p style="font-size: 15px;">The following fonts are the best web safe fonts for HTML and CSS:</p>
+        <ul class="lis1">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
         </div>
-        <div class="main-right"></div>
+        <div class="main-right d-flex align-items-center">
+            <img src="../html/아무그림1.png" alt=" " style="width: 200px; height: 600px;">
+        </div>
     </div>
 </body>
 </html>
