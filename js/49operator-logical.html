@@ -43,8 +43,21 @@
             let p1 = document.querySelector("#select1").value;
             let p2 = document.querySelector("#select2").value;
 
-            console.log(p1);
-            console.log(p2);
+            // console.log(p1);
+            // console.log(p2);
+
+
+            if(p1 === p2){
+                document.getElementById("result1").innerHTML = "비겼습니다.";
+            } else if((p1 === "s") && (p2 === "p")){
+                document.getElementById("result1").innerHTML = "player1이 이겼습니다.";
+            } else if ((p1 === "p") && (p2 === "r")){
+                document.getElementById("result1").innerHTML = "player1이 이겼습니다."
+            } else if ((p1 === "r") && (p2 === "s")){
+                document.getElementById("result1").innerHTML = "player1이 이겼습니다."
+            } else{
+                document.getElementById("result1").innerHTML = "player2가 이겼습니다."
+            }
         }
 
     </script>
