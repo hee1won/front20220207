@@ -10,20 +10,19 @@
 </head>
 <body>
     
-
     <script>
 
-        // {} 중괄호가 생략되면 하나의 statement만 인식한다.
+        let b = 20; //global scope
 
-        console.log(1);
-        if(true){ 
-            // 코드블럭의 명령문이 하나면 {} 생략 가능.
-            // 하지만 꼭 작성하는 습관 가질 것.
-            console.log(2);
+        if (true) {
+            let a = 4; // 선언된 변수는 (코드)블럭 안에서만 사용 가능
             console.log(3);
+            console.log(a);
+            console.log(b);
         }
-        console.log(4);
-        console.log(5);
+
+
+
 
 
     </script>
