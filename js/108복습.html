@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    </style>
+</head>
+<body>
+    <h1>
+        35.type 변형 산술<hr>
+        String type을 Number타입으로 바꿀때는 script 안에서 Number를 쓴다. <br>
+        Number type에서 String type으로 바꿀때는 "";를 붙혀서 쓴다.
+        <hr>
+        38.boolean 참 거짓 <br> <br>
+        boolean은 참 거짓을 판별한다. <br>
+        예를들어 console.log(true)는 참, console.log(false)는 거짓. <br>
+        let a = true; <br>
+        let b = false <br>
+        console.log(a)는 결과값이 나오지만 console.log(b)는 거짓이라 결과가 나오지 않는다.
+        <hr>
+        39.operate-comparison(비교 연산자)
+    </h1>
+    <h1>if문 나이 확인</h1>
+
+    <input type="text" id="input1">
+    <button id="button1">나이 확인</button>
+    <p id="result1"></p>
+
+    <script>
+
+        document.getElementById("button1").onclick = function(){
+
+            let a = document.getElementById("input1").value;
+            a = Number(a);
+
+            if(a >= 20){
+                document.getElementById("result1").innerHTML = "성인 입니다."
+            } else if(a >= 13){
+                document.getElementById("result1").innerHTML = "청소년 입니다."
+            } else{
+                document.getElementById("result1").innerHTML = "아동 입니다."
+            }
+        }
+    </script>
+    <hr>
+
+    <h1>if문과 산술연산자로 짝수 나타내기</h1>
+
+    <input type="text" id="input2">
+    <button id="button2">짝수 홀수 확인</button>
+    <p id="result2"></p>
+
+    <script>
+
+        document.getElementById("button2").onclick = function(){
+            let b = document.getElementById("input2").value;
+            b = Number(b);
+
+            if(b % 2 == 0){
+                document.getElementById("result2").innerHTML = "짝수입니다."
+            } else {
+                document.getElementById("result2").innerHTML = "홀수입니다."
+            }
+        }
+    </script>
+    <hr>
+    <h1>if else if문으로 등급 나타내기</h1>
+    <input type="text" id="input3">
+    <button id="button3">등급 확인</button>
+    <p id="result3"></p>
+
+    <script>
+
+        document.getElementById("button3").onclick = function(){
+            let c = document.getElementById("input3").value;
+            c = Number(c);
+
+            if(c >= 90){
+                document.getElementById("result3").innerHTML = "A등급 입니다."
+            } else if (c >= 80){
+                document.getElementById("result3").innerHTML = "B등급 입니다."
+            } else if (c >= 70){
+                document.getElementById("result3").innerHTML = "C등급 입니다."
+            } else {
+                document.getElementById("result3").innerHTML = "D등급 입니다."
+            }
+        }
+    </script>
+    <hr>
+    <h1>48.논리 연산자</h1>
+    <h1>논리 연산자는 && (AND), ||(OR), !(NOT)연산자 등이 있다. <br> <br>
+        <h2 style="color: blue;">&& AND연산자. <br> <br>
+            피연산자가 두개, <br>
+            피연산자의 type : boolean <br>
+            연산결과 : boolean <br>
+            결과 : 두피연산자가 모두 true일 때만 true 나머지는 모두 false <br>
+            <br>
+            <hr>
+        </h2>
+        <h2 style="color: purple;">|| OR 연산자. <br> <br>
+            피연산자가 두개  <br>
+            피연산자의 type : boolean <br>
+            연산결과 : boolean <br>
+            결과값 : 두피연산자가 모두 false일 때만 false, 나머지는 모두 true <br>
+            <br>
+            <hr>
+
+        </h2>
+
+        <h2 style="color: green;">! NOT연산자. <br> <br>
+            피연산자가 하나 <br>
+            피연산자의 type : boolean <br>
+            연산결과 : boolean <br>
+            결과값 : 피연산자가 true이면 false, 피연산자가 false 이면 true <br>
+            <br>
+            <hr>
+        </h2>
+    </h1>
+
+    <hr>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
