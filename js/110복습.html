@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    </style>
+</head>
+<body>
+
+    <input type="text" id="strex">
+    <p id="strx"></p>
+
+    <hr>
+
+    <input type="text" id="strex1">
+    <p id="strx1"></p>
+
+    <input type="text" id="sex">
+    <p id="se1"></p>
+    <button id="s1">성별 확인</button>
+    
+
+    <script>
+
+        // string
+
+        // object : {}, 프로퍼티(속성), 메소드를 정의할 수 있다.
+        // string / "",''
+
+        let obj1 = {
+            aprop : "hi",
+            amethod : function(){
+                console.log(999);
+            }
+        }
+        console.log(obj1.aprop); // obj 오브젝트 안에 있는 aprop를 콘솔 안에 입력시킨다.
+        obj1.amethod(); // obj1 amethod 함수를 실행시킨다. 그러면 함수안에 콘솔창에 999를 나타내라는 함수가 있으니 콘솔창에 999가 나온다.
+
+
+
+        // lenth : string의 길이
+        // string을 heewon으로 정의하고 이 길이의 값을 나타낸다. 그럼 "h","e","e","w","o","n"의 글자 개수는 6개 이니까 6개가 나타난다.
+
+        let string = "heewon"
+        console.log(string.length); // 콘솔 로그창에 string 안에 글자 갯수를 나타낸다 ,,, 6이 나온다 ( h e e w o n )
+
+
+        // lenth를 이용한 ex
+        
+        // 1. input안에 텍스트를 치면 갯수를 나타내는 법. (id : strex, strx)
+
+            document.getElementById("strex").onkeyup = function(){
+                let a = document.getElementById("strex").value;
+                document.getElementById("strx").innerHTML = a.length;
+            }
+
+            
+        // 2. input안에 5글자 이상이면 "충분한 길이 입니다."
+        //             5글자 미만이면 "글자 수가 부족합니다." (id : strex1, strx1)
+
+            document.getElementById("strex1").onkeyup = function(){
+                let a = document.getElementById("strex1").value;
+                if(a.length >= 5){
+                    document.getElementById("strx1").innerHTML = "충분한 길이 입니다."
+                } else {
+                    document.getElementById("strx1").innerHTML = "글자 수가 부족합니다."
+                }
+            }
+
+
+
+
+        // slice : string을 지정한곳부터 나오게 하거나 지정한곳만 나오게 하는 명령어
+
+            let sli = "script"
+            
+            let sli1 = sli.slice(0); // sli의 script의 0번째부터 5번째 까지. 결과 : script
+            console.log(sli1);
+
+            let sli2 = sli.slice(3); // sli의 script의 3번째 후 4번째 부터 끝까지. 결과 : ipt
+            console.log(sli2);
+
+            let sli3 = sli.slice(3, 5); // sli의 script의 3번째 부터 5번째 전까지. 결과 : ip
+            console.log(sli3);
+
+            let sli4 = sli.slice(3, sli.length) // sli의 script의 3번째 부터 끝까지. 결과 : ipt
+            console.log(sli4);
+            
+
+            // slice를 이용한 ex
+            // 1. 버튼을 클릭 했을때 7번째 자리가 1이나 3이면 "남자", 2나 4면 "여자"
+
+            document.getElementById("s1").onclick = function(){
+                let a = document.getElementById("sex").value;
+                let b = a.slice(6, 7);                      // a의 7번째 자리가
+                 if((b == 1 )||(b == 3)){                   
+                    document.getElementById("se1").innerHTML = "남자 입니다."   // 1 이거나 3 일때 " 남자 입니다. 출력 "
+                 } else if((b == 2)||(b == 4)){
+                    document.getElementById("se1").innerHTML = "여자 입니다."   // 2 또는 4 일때  "여자 입니다" 출력
+                    } else{
+                    document.getElementById("se1").innerHTML = "잘못된 성별 입니다."    // 둘다 아닐때 " 잘못된 성별 입니다. " 출력
+                }
+            } 
+
+        
+        // arrary : 배열 (여러 값을 가지고 있는 객체 (object))
+        // 각 값은 index로 구분된다.
+        // 각 값은 ,로 구분해서 작성
+        // [] 괄호 사용
+        // 배열의 각 값은 다른 타입이어도 됨
+
+
+        let arr1 = ["java"];
+        let arr2 = [0, 5, 0];
+        let arr3 = [true];
+
+        console.log(arr1[0]);       // arr1의 0번째를 출력 arr1은 0번 밖에 없음 따라서 "java"가 출력된다.
+        console.log(arr2[1]);       // arr2의 2번째를 출력 "5"가 출력됨.
+        console.log(arr3[0]);       // arr3도 0번째 밖에 없으므로 0을 출력 "true"가 출력된다.
+                                    // 이 처럼 타입이 달라도 모두 가능하다.
+
+
+        arr2[0] = 100;          // arr2의 0번째를 100으로 교체.
+        console.log(arr2[0]);   // 100이 출력 됨.
+
+
+
+        // arrary를 lenth랑 같이 사용
+
+        let arr4 = ["hellojava", 5, "heewon"]
+        console.log(arr4[0].length);   // arr4의 0번째 글자 갯수를 출력 h e l l o j a v a 이니까 결과는 : 9로 출력된다.
+        console.log(arr4[2].length);   // arr4의 2번째 글자 갯수를 출력 h e e w o n 이니까 결과는 : 6
+        console.log(arr4[arr4.length-1]);   // *** arr4의 갯수는 3개이다. 하지만 순서는 앞부터 0번째로 쓰기때문에, lenth는 "hellojava", "5", "heewon"
+                                            // 이렇게 나오지만 lenth-1을 하면 3-1 = 2이다 그래서 lenth-1을 하면 제일 마지막 아이템이 출력된다.
+
+        arr4.push("javascript");    // arr4의 마지막에 push를 이용하여 추가 할 수 있다.
+        console.log(arr4);          // arr4에 "javascript"를 추가.
+
+
+        
+        // split === "중요"
+        // split : 단어를 한 글자씩 잘라서 나오게 하는 명령어 주로 arrary랑 같이 쓰인다.
+
+        let spl = "javascript"
+
+        let spl1 = spl.split("");       // console창에 'j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't' 가 한 글자씩 출력된다.
+        console.log(spl1);
+
+
+
+
+
+
+        
+
+
+
+
+
+    </script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
