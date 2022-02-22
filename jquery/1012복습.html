@@ -7,23 +7,191 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
+        #click-show{
+            display: none;
+        }
+        #fade-in{
+            display: none;
+        }
+        #slide-down{
+            display: none;
+        }
     </style>
 </head>
 <body>
     
 
     <h1 id="hide1">hide123</h1>
+    <h1 id="show1">show123</h1>
+    <h1 id="click1">click123</h1>
+    <button id="click-hide-button">hide button</button>
+    <button id="click-show-button">show button</button>
+    <button id="click-toggle-button">toggle button</button>
+    <h1 id="click-hide">click-hide</h1>
+    <h1 Id="click-show">click-show</h1>
+    <h1 id="click-toggle">click-toggle</h1>
+    <hr>
+    <input type="text" id="event-input1">
+    <h1 id="input1"></h1>
+    <hr>
+    <h1 id="dbl-click">dbl--click</h1>
+    <hr>
+    <h1 id="hover">hover</h1>
+    <hr>
+    <button id="event-fade-in">fade in</button>
+    <h1 id="fade-in">fade in</h1>
+    <button id="event-fade-out">fade out</button>
+    <h1 id="fade-out">fade out</h1>
+    <button id="event-fade-toggle">fade toggle</button>
+    <h1 id="fade-toggle">fade toggle</h1>
+    <hr>
+    <button id="event-slide-up">slide-up-button</button>
+    <p id="slide-up">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere unde quae itaque, minus suscipit possimus corrupti iste temporibus eius molestias natus voluptatibus, eaque porro in fuga obcaecati, expedita distinctio animi.
+    </p>
+    <br>
+    <button id="event-slide-down">slide-down-button</button>
+    <p id="slide-down">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam quidem dolores voluptatem corrupti quisquam accusamus, earum, eum laudantium ab soluta! Quae, libero praesentium. Praesentium nostrum necessitatibus non ipsam incidunt.
+    </p>
+    <br>
+
+    <button id="event-slide-toggle">slide-toggle-button</button>
+    <p id="slide-toggle">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est expedita id fugit! Autem, rerum quae? Saepe nesciunt, voluptas, qui sed tempora quia esse ratione possimus ad, explicabo recusandae ut voluptatum?
+    </p>
+
 
     <script>
 
         // jquery는 $를 통해서 실행시킨다.
 
         
-        // jquery hide
+        // jquery hide & show
 
         $("#hide1").hide();     // id : hide1이 사라진다.
+        $("#show1").show();     // id : show1이 나타난다.
+
+        // show랑 hide는 click을 이용해 액션을 줄 수 있다.
 
     </script>
+
+    <script>
+
+        // click
+
+        $("#click1").click(function(){
+            console.log("클릭 됨!!");           // id : click1을 클릭하면 콘솔창에 클릭됨 이 출력된다.
+        })
+
+        // click hide - show - toggle
+        
+        $("#click-hide-button").click(function(){      // id : click-hide-button을 클릭하면 h1 click - hide가 3초에 걸쳐 사라진다.
+            $("#click-hide").hide(3000);
+        });
+
+        $("#click-show-button").click(function(){       // id : click-show-button을 클릭하면 display none상태에서 3초에 걸쳐 나타난다
+            $("#click-show").show(3000);
+        })
+
+        $("#click-toggle-button").click(function(){
+            $("#click-toggle").toggle(3000);            // id : click-toggle-button을 클릭하면 hide나 show는 일회성이지만 toggle은 hide, show를 계속 사용 할 수 있다.
+        })
+    
+    </script>
+
+    <script>
+
+        //                          -----event-----
+
+        // keyup
+
+        // keyup은 키보드에서 손을 땐 즉시 액션을 취하는 이벤트이다.
+
+        $("#event-input1").keyup(function(){
+            document.getElementById("input1").innerHTML = this.value;   // id : event-input1에 아무거나 입력하면 keyup즉시 h1에 그대로 나타난다.
+        })
+
+
+
+        // dblclick
+
+        // dblclick는 더블클릭을 했을때 나타나는 액션이다.
+
+        $("#dbl-click").dblclick(function(){        // id : dbl-click에 더블클릭을 하면 hide되는 액션을 줬다.
+            $("#dbl-click").hide();
+        })
+
+        // hover
+        
+        // hover란 마우스가 엔터되고 리브되는것을 하나로 합친것을 말한다.
+        // 따라서 파라미터도 enter 파라미터 leave 파라미터 두가지를 작성해야 한다.
+
+        $("#hover").hover(function(){
+            $("#hover").hide("slow")
+        }, function(){
+            $("#hover").show("slow")    // id : hover 됐을때 첫번째 파라미터는 hide를 줬고 두번째 파라미터는 show를 줘서 마우스를 올렸다 때면 숨겨졌다 다시 보여진다.
+        })
+
+
+        //      event 오늘 배운내용은 mouseenter, keydown, mouseup등 위 문법처럼 쓰면 된다.
+    </script>
+
+    <script>
+
+        //  fadeOut, fadeIn
+
+        // fade in, out도 hide, show와 마찬가지로 보여지고 숨겨지는것을 말한다.
+
+        $("#event-fade-in").click(function(){       // id : event-fade-in을 클릭하면 3초에 걸쳐 fade in이 나타난다.
+            $("#fade-in").fadeIn(3000);
+        })
+
+        $("#event-fade-out").click(function(){      // id : event-fade-out를 클릭하면 display none으로 숨겨졌던 fadeout이 나타난다.
+            $("#fade-out").fadeOut(3000);
+        })
+
+        $("#event-fade-toggle").click(function(){   // id : event-fade-toggle 버튼을 클릭해서 숨기고 나타낼 수 있다.
+            $("#fade-toggle").fadeToggle("slow");
+        })
+
+    </script>
+
+    <script>
+
+        // slideUp, slideDown
+
+        // 지금까지 한 예제 show-hide, fadein-out와 비슷하다.
+
+        $("#event-slide-up").click(function(){      // id : event-slide-up버튼을 누르면 slide-up P엘리먼트가 올라간다.
+            $("#slide-up").slideUp(3000);
+        })
+
+        $("#event-slide-down").click(function(){    // 위 예제들과 마찬가지로 display none으로 숨겨서 sldie-down버튼을 누르면 내려오게 한다.
+            $("#slide-down").slideDown("fast");
+        })
+
+        $("#event-slide-toggle").click(function(){  // id: event-slide-toggle 버튼을 누르면 p엘리먼트가 올라가고 내려온다.
+            $("#slide-toggle").slideToggle("slow");
+        })
+        
+
+
+    </script>
+
+    <script>
+
+        //          effect
+
+        // 위에 예제에서 계속 사용했던 event()안에 들어있는 값을 말한다.
+        // hide, show, toggle, fadeOut, fadeIn, slideUp, slideDown등 뒤에()안에 밀리세컨즈 값으로 나타내고 숨기고 토글 할 수 있다.
+        // hide(3000) = 3초 동안 숨겨진다.
+        // show("slow") = 느리게 보여진다
+        // toggle("fast") = 빠르게 숨기고 보여진다.
+
+    </script>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
