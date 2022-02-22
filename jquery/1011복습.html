@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+    </style>
+</head>
+<body>
+
+    <h1>
+        Lorem.
+    </h1>
+    <h1>
+        Animi!
+    </h1>
+    <h1 class="note">
+        Ipsa!
+    </h1>
+    <p>
+        Lorem.
+    </p>
+    <p class="note">
+        Ratione!
+    </p>
+    <p class="note">
+        Tempore.
+    </p>
+
+    <input type="text" id="input1">
+    단 까지
+    <button id="button1">구구단 출력</button>
+    <div id="result1"></div>
+    
+
+    <script>
+
+        // note 클래스를 가진 요소를 console에 출력
+        let a = document.getElementsByClassName("note");
+        for(i = 0; i < a.length; i++){
+            console.log(a[i].innerHTML);
+        }
+
+    </script>
+
+    <script>
+
+        // for문 복습 문제
+        // note클래스를 가진 요소의 콘텐츠를 클릭하면 console에 출력.
+        let b = document.getElementsByClassName("note")
+        for(let head of b){
+            head.onclick = function(){
+                console.log(head.innerHTML);
+            }
+        }
+    </script>
+
+    <script>
+
+        // while문
+        // while문은 ()안에 값이 true면 실행되고 false면 실행되지 않는다.
+
+        let c = 0;
+        while(c < 3){           // c가 3보다 작을때 까지
+            console.log(c);     // console창에
+            c++                 // 1씩 증가하면서 출력
+        }
+
+        d = 0;
+        while(d < 10){          // d는 0
+            console.log(d);     // console창에
+            d += 2;             // d는 0부터 2씩 증가하면서 10 미만까지 출력
+        }
+
+        // ex
+        // while문을 이용해서 10부터 0까지 console창에 출력되도록
+
+        e = 10;
+        while(e >= 0){
+            console.log(e);
+            e--;
+        }
+
+        // while문을 이용해서 9, 7, 5, 3, 1 입력
+
+        f = 9;
+        while(f >= 0){
+            console.log(f);
+            f -= 2;
+        }
+
+
+        // do - while문
+        // do - while은 한번 이상의 조건을 무조건 실행시키고 그 다음 참 , 거짓을 판별한 후 참이면 실행, 거짓이면 실행시키지 않을때 사용한다.
+    </script>
+
+    <script>
+
+        // if - break문
+        // break문은 가장 가까운 loop문(for, while)을 종료한다.
+
+        for(let i = 0; i < 10; i++){
+            console.log(i);
+            break;              // break위에 i출력 명령이 한번 있으니 0 출력하고 바로 종료.
+        }
+
+        for(let i = 0; i < 10; i++){
+            if(i === 3){
+                break;
+            }
+            console.log(i);     // i는 1부터 10까지 증가하지만 if 3일때 종료한다.
+        }
+
+        for(let i = 0; i < 10; i++){
+            console.log(i);
+            if( i === 3){
+                break;          // 위와 같은 코드지만 break문 전에 console에 출력하라는 명령이 있으니 3까지 출력하고 그다음 종료한다.
+            }
+        }
+
+    </script>
+
+    <script>
+
+        // if - while문
+        // if - for문처럼 사용 할 수 있다.
+        let g = 0;
+        while(g < 10){          // g가 9까지
+            console.log(g);     // 콘솔창에 g를 출력
+            if(g === 5){        // 만약 g가 5일때
+                break;          // 반복문 종료
+            }
+            g++                 // g는 1부터 9까지 증가
+        }                       // 결론은 1~5까지 출력된다.
+    </script>
+
+    <script>
+
+        // continue문
+        // continue는 break와 다른점이 break는 반복문 종료이지만, continue는 조건 하나만 건너뛰고 다음 조건을 반복한다.
+
+        let h = -1;
+        while(h < 10){
+            h++
+            if(h === 3){
+                continue;
+            }
+            console.log(h);
+        }
+    </script>
+
+    <script>
+
+        // ex
+        // continue를 사용해서 5단 빼고 구구단 출력하기
+
+        for(i = 2; i <= 9; i++){            // 단 출력
+            for(j = 1; j <= 9; j++){        // 곱해지는 값 출력
+                if(i === 5){                // 만약 단이 5단이면
+                    continue;               // 5단 제외
+                }
+                console.log(i + "x" + j + "=" + (i*j));
+            }
+        }
+    </script>
+
+    <script>
+
+        // ex
+        // 버튼을 누르면 n단 까지 출력
+
+        document.getElementById("button1").onclick = function(){
+            let m = "";
+            let h = document.getElementById("input1").value;
+            h = Number(h)
+            for( i = 2; i <= 9; i++){
+                for( j = 1; j <= 9; j++){
+                    m += i + "x" + j + "=" + (i*j);
+                    m += "<br>";
+                }
+                if(i === h){
+                    break;
+                }
+            }
+            document.getElementById("result1").innerHTML = m;
+        }
+    </script>
+
+    <script>
+
+        // switch - case문
+        // switch - case문은 if - else문이랑 비슷하지만 더 간결하게 쓸 수 있다.
+        // switch()안에 값이 case 값에 true면 실행되고 전부 false면 마지막 default값으로 할 수 있다.
+        // *** case 값을 마친 후에 break로 끝내줘야 한다.
+        // break를 사용하지 않으면 case값 전부 실행된다.
+
+        let w = 1;          // w의 값은 1이므로 case1 값이 출력됨.
+        switch(w){
+            case 1:
+            console.log("x 는 1");
+            break;
+            case 2:
+            console.log("x 는 2");
+            break;
+            case 3:
+            console.log("x 는 3");
+            break;
+        }
+
+        switch(false){      // switch값이 fasle므로 default값이 실행됨.
+            case 1:
+            console.log("ㄴㄴㄴ");
+            break;
+            case 2:
+            console.log("ㄷㄷㄷ");
+            break;
+            default:
+                console.log("출력됨.");
+        }
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

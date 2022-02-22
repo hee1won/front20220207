@@ -137,7 +137,7 @@
                                             // 이렇게 나오지만 lenth-1을 하면 3-1 = 2이다 그래서 lenth-1을 하면 제일 마지막 아이템이 출력된다.
 
         arr4.push("javascript");    // arr4의 마지막에 push를 이용하여 추가 할 수 있다.
-        console.log(arr4);          // arr4에 "javascript"를 추가.
+        console.log(arr4[arr4.length-1]);          // arr4에 "javascript"를 추가.
 
 
         
@@ -151,15 +151,61 @@
 
 
 
+        // *********   for   *********
+        // for : 반복문
+        // for 다음 () 안에 3개를 작성.
+        // 1. 초기값, 2. 실행 조건, 3. 증감명령문
+
+
+        for (let i = 0; i <= 3; i++){       // i = 0 (초기값) i <= 3 (실행 조건. i가 3보다 크거나 같을때까지) i++(증감문. 1씩 증가)
+            console.log(i);     // 따라서 0, 1, 2, 3이 출력 된다.
+        }
+
+        // ex
+        // 1. console창에 "abc"가 5번 출력 되도록
+        // 2. console창에 "korea"가 5번 출력 되도록
+
+        for(let i = 0; i < 5; i++){
+            console.log("abc");
+        }
+        for(let i = 1; i <= 10; i++){
+            console.log("seoul");
+        }
+
+        // arrary 배열 안에 for문을 쓸 때
+
+        let arr123 = ["korea", "seoul", "usa", "japan"]
+
+        for(i = 0; i < 4; i++){             // i = 0 (korea부터) i < 4 4보다 작을때 까지(0:korea, 1:seoul, 2:usa, 3:japan) 3. i++ 계속 반복
+            console.log(arr123[i]);         // 따라서 "korea", "seoul", "usa", "japan"이 따로따로 다른줄에 나온다.
+        }
+
+        // arrary, lenth랑 같이 for문을 쓸 때
+
+
+        let ai = ["hello", "hi", "java", "script", "coding", "heewon"]
+
+        for (i = 0; i < ai.length; i++){    // ai의 item갯수는 6개다. 그래서 i는 0으로 두고 6 보다 작을때까지 하면 총 0,1,2,3,4,5 6개가 나온다.
+            console.log(ai[i]);     // 따라서 전부 다 출력 된다.
+        }
+
+        for (i = 0; i <= ai.length -1; i++){  // 위와 똑같은 결과를 나타내는데, 이건 ai.lenth-1을 하므로 5개가 된다. 하지만 실행 조건에 '같거나' 클때 까지라서
+                                              // 마찬가지로 0, 1, 2, 3, 4, 5
+            console.log(ai[i]);
+        }
+
+
+        // arrary안에 for문을 사용해서 반대로 출력하기
+
+        let rev = ["kor", "jpn", "chi", "usa", "uk", "eu"]
+
+        for (i = 5; i >= 0; i--){
+            console.log(rev[i]);
+        }
 
 
 
         
-
-
-
-
-
     </script>
 
     

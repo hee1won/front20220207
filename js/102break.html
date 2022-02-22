@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    </style>
+</head>
+<body>
+    
+    <script>
+
+        // break : 가장 가까운 loop문 종료
+
+        for(let i = 0; i < 10; i++){
+            console.log(i);
+            break;
+        }
+
+        for(let i = 0; i < 10; i++){
+            console.log(i);
+
+            if(i === 3){        // 만약 3일때
+                break;          // for문 종료
+            }
+        }
+
+
+        // simple ex
+        // 0 ~ 4 출력
+        // console.log가 먼저 있으므로 4까지 출력하고 그다음 4일때 break니까 i === 4를 쓴다.
+        for(let i = 0; i < 10; i++){
+            console.log(i);
+            //코드 작성
+            if(i === 4){
+                break;
+            }
+        }
+
+        // 0 ~ 4 출력
+        // 위 코드와 똑같지만 break는 즉시 빠져나가므로 if문을 먼저 썼을때 4까지만 실행하고 나가야한다. 그래서 4다음 5일때 나간다.
+        for(let i = 0; i < 10; i++){
+            // 코드 작성
+            if(i === 5){
+                break;
+            }
+            console.log(i);
+        }
+        
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
